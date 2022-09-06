@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  app:
+    image: t22v-app:vulnerable
+    container_name: app
+    build: app
+    ports:
+      - "8080:8080"
+  exploit:
+    image: t22v-exploit:latest
+    container_name: exploit
+    build: exploit
+    ports:
+      - "8081:8081"
+      - "1389:1389"
+    command: "http://exploit:8081/#Exploit"
+  listener:
+    image: t22v-listener:latest
+    container_name: listener
+    build: listener
+    ports:
+      - "4444:4444"
+    stdin_open: true
+    tty: true
+  scanner:
+    image: t22v-scanner:latest
+    container_name: scanner
+    volumes:
+      - ./app:/techtonic22-vulnerabilities/app
+      - ./images:/techtonic22-vulnerabilities/images
+    build: ./
+    stdin_open: true
+    tty: true
