@@ -8,7 +8,7 @@ To get started, you will need to build the project using the following instructi
 
 1. Download the project:
    - Open up a terminal
-   - Enter `git clone https://github.com/VGW/techtonic22-vulnerabilities.git`
+   - Enter `git clone https://github.com/kimberleyhallifax/techtonic22-vulnerabilities.git`
    - Enter `cd techtonic22-vulnerabilities/`
 2. Open Docker Desktop
 3. Build using one of the following options below;
